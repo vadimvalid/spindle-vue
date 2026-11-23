@@ -10,8 +10,12 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@ai-sdk/google": "^4.0.124",
+    "@ai-sdk/vue": "^4.0.179",
+    "ai": "^7.0.179",
     "nuxt": "^4.6.4",
     "vue": "^3.5.45",
-    "vue-router": "^5.4.0"
+    "vue-router": "^5.4.0",
+    "zod": "^4.6.7"
   }
 }
