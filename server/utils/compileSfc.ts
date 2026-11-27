@@ -1,10 +1,7 @@
 import { parse, compileScript, compileStyle } from "vue/compiler-sfc";
 import { transform } from "esbuild";
 import { createHash } from "node:crypto";
-
-export type CompileResult =
-  | { ok: true; js: string; css: string }
-  | { ok: false; errors: string[] };
+import type { CompileResult } from "#shared/types/compile";
 
 export async function compileSfc(
   code: string,

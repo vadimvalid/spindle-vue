@@ -8,7 +8,10 @@ const GenerateRequestSchema = z.object({
 
 export default defineEventHandler(async (event) => {
   // Invalid body → 400 with error details, before calling the model
-  const { prompt } = await readValidatedBody(event, GenerateRequestSchema.parse);
+  const { prompt } = await readValidatedBody(
+    event,
+    GenerateRequestSchema.parse,
+  );
 
   const result = streamText({
     model: useModel(),
